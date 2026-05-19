@@ -14,53 +14,73 @@ body {
     line-height: 1.3;
 }
 
-/* HEADER */
+/* HEADER COMPLETAMENTE REFORMADO PARA EL LOGO GRANDE */
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    padding: 24px 20px;
-    min-height: 280px;
-    background-image: url("img/logoLaTiendecita.png");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 55%;
+    gap: 12px;
+    padding: 20px 20px 24px 20px;
+    background-color: #ffffff; /* Fondo blanco limpio para dar luz al logo */
     border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    margin: 50 -10px 15px -10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    margin: 0 -10px 20px -10px; /* Corregido margen superior */
 }
+
+/* CONTENEDOR DE LA IMAGEN DEL LOGO */
+.logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.main-logo-img {
+    width: 80%; /* Ocupa el 80% del ancho de la pantalla móvil */
+    max-width: 320px; /* Evita que crezca de más en pantallas grandes */
+    height: auto;
+    object-fit: contain;
+}
+
 .header-text {
     text-align: center;
     max-width: 100%;
 }
+
 .header-text h1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     color: #d84315;
     margin: 0;
-    text-shadow: 0 1px 3px rgba(255,255,255,0.9);
+    font-weight: 800;
 }
+
 .subtitle {
     color: #5b4636;
-    font-size: 1rem;
-    margin: 8px 0 0;
+    font-size: 0.95rem;
+    margin: 6px 0 0;
     line-height: 1.4;
 }
+
 .header-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 28px;
+    padding: 12px 28px;
     border-radius: 999px;
     background-color: rgba(230,81,0,0.95);
     color: #ffffff;
     font-weight: 800;
     text-decoration: none;
-    box-shadow: 0 8px 20px rgba(230,81,0,0.2);
+    box-shadow: 0 6px 15px rgba(230,81,0,0.2);
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
+
 .logo-container { display: none; }
 
+/* HERO BANNER ALTERNATIVO */
 .hero-banner {
     display: flex;
     flex-wrap: wrap;
@@ -132,6 +152,7 @@ body {
     align-items: center;
 }
 .swipe-hint { font-size: 0.7rem; color: #adb5bd; font-weight: 400; }
+.review-link { text-decoration: none; }
 
 /* CONTENEDOR PERSONALIZADO */
 .bocata-card {
@@ -170,6 +191,8 @@ body {
     border-radius: 12px;
     font-weight: 700;
 }
+
+/* CUADRÍCULA DE MENÚ ORIGINAL DE 2 COLUMNAS */
 .menu-grid {
     display: grid;
     gap: 10px;
@@ -192,6 +215,8 @@ body {
     color: #6c757d;
     line-height: 1.4;
 }
+
+/* SECCIÓN QR RESEÑAS */
 .qr-placeholder {
     width: 100%;
     min-height: 200px;
@@ -210,15 +235,9 @@ body {
     object-fit: contain;
     display: block;
 }
-.review-note {
-    color: #6c757d;
-    font-size: 0.75rem;
-}
-.footer-note {
-    color: #495057;
-    font-size: 0.78rem;
-    margin: 4px 0;
-}
+.review-note { color: #6c757d; font-size: 0.75rem; }
+.footer-note { color: #495057; font-size: 0.78rem; margin: 4px 0; }
+
 /* 2. DISEÑO DEL CARRUSEL EN FILA HORIZONTAL */
 .carousel-container {
     display: flex;
@@ -248,7 +267,7 @@ body {
 .carousel-card h4 { font-size: 0.85rem; color: #212529; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .carousel-card p { font-size: 0.7rem; color: #6c757d; height: 32px; overflow: hidden; margin-top: 2px; }
 
-/* 3. DISEÑO DE TARJETAS DEL TOP 5 */
+/* 3. DISEÑO DE TARJETAS DEL TOP 3 */
 .top5-container {
     display: flex;
     flex-direction: column;
@@ -285,7 +304,7 @@ body {
     margin-bottom: 3px;
 }
 
-/* BOTONES GLOVO MULTI-TAMAÑO */
+/* BOTONES ESTILO GLOVO MULTI-TAMAÑO */
 .sizes-container { display: flex; gap: 6px; justify-content: space-between; }
 .btn-size {
     flex: 1;
